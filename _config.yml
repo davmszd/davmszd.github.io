@@ -1,0 +1,45 @@
+# Site settings
+author: Davood Moosazadeh
+title: Davood Moosazadeh
+email: ddragon@gmail.com
+description: Stories from a Full Stack developer.
+url: "http://davood.github.io/" # the base hostname & protocol for your site
+twitter_username: davmszd
+excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed/
+
+# Build settings
+markdown: kramdown
+permalink: /archive/:year/:month/:day/:title/
+paginate: 3
+paginate_path: "page/:num"
+category_dir: categories
+
+highlighter: rouge
+
+#Default settings
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      author: Davood Moosazadeh
+      layout: "post"
+      category: programming
+      comments: true
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "page"
+      
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+feed:
+  path: atom.xml
+
+
+
